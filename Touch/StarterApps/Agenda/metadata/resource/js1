@@ -1,0 +1,14 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "url": "vendor/rrule.js",
+        "defer": true
+    },
+    "designerId": "94689b26-3c05-41fe-9288-ddf9c887236e"
+}

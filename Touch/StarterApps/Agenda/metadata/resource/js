@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "vendor/lodash.js"
+    },
+    "designerId": "933a4364-6f6d-491a-ba4f-7003aeb9213d"
+}

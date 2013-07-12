@@ -1,0 +1,108 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Navigation"
+    },
+    "designerId": "f6347e0b-74e0-4077-b5c5-8df233794ef8",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "start",
+                "implHandler": [
+                    "// Because we're going to make \"ghost\" events (for recurring events), we need",
+                    "// to build up the list's data by hand. I'll walk you through it.",
+                    "",
+                    "// First, we grab the variables we need.",
+                    "var DAYS_AHEAD = 60,",
+                    "    realEvents = Ext.getStore('Events'),",
+                    "    eventListComponent = this.getEventList(),",
+                    "    events = [],",
+                    "    today,",
+                    "    i,",
+                    "    dayStart,",
+                    "    dayEnd,",
+                    "    eventsToday = [];",
+                    "",
+                    "// What was the first moment of today?",
+                    "today = new Date();",
+                    "today.setHours(0);",
+                    "today.setMinutes(0);",
+                    "today.setSeconds(0);",
+                    "today.setMilliseconds(0);",
+                    "",
+                    "// Now, we'll go through each day and see if the events happen.",
+                    "for (var i = 0; i < DAYS_AHEAD; i ++) {",
+                    "",
+                    "\t// What's the start and the end of the day we're looking at?",
+                    "    dayStart = Ext.Date.add(today, Ext.Date.DAY, i);",
+                    "    dayEnd = Ext.Date.add(dayStart, Ext.Date.DAY, 1);",
+                    "",
+                    "    // Check every event: does the event occur on this day?",
+                    "    eventsToday.length = 0; // clear it out",
+                    "    realEvents.each(function(realEvent) {",
+                    "        if (realEvent.occursBetween(dayStart, dayEnd)) {",
+                    "",
+                    "            var start = Ext.Date.clone(dayStart),",
+                    "                originalStart = realEvent.getStartTime();",
+                    "            start.setHours(originalStart.getHours());",
+                    "            start.setMinutes(originalStart.getMinutes());",
+                    "            start.setSeconds(originalStart.getSeconds());",
+                    "            start.setMilliseconds(originalStart.getMilliseconds());",
+                    "",
+                    "            eventsToday.push({",
+                    "\t\t\t\trealEvent: realEvent,",
+                    "\t\t\t\tname: realEvent.get('name'),",
+                    "\t\t\t\tstart: start,",
+                    "                duration: humanizeDuration(realEvent.get('duration'))",
+                    "            });",
+                    "",
+                    "        }",
+                    "    });",
+                    "",
+                    "    // Sort the events today by time.",
+                    "    // TODO",
+                    "",
+                    "    // Add today's events to our \"ghost\" list.",
+                    "    // TODO there's a better way to do this",
+                    "    eventsToday.forEach(function(event) {",
+                    "        events.push(event);",
+                    "    });",
+                    "    console.log(events);",
+                    "",
+                    "}",
+                    "",
+                    "// And finally, let's dump the stuff into the view.",
+                    "eventListComponent.setData(events);"
+                ],
+                "name": "initialize",
+                "designer|targetType": "EventList",
+                "designer|controlQuery": "eventlist"
+            },
+            "designerId": "8204148c-4711-4a5f-bb12-d38a6f5b6090"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "eventList",
+                "selector": "eventlist"
+            },
+            "designerId": "22310dfa-da27-48b8-8ac3-df64b58feffd"
+        }
+    ]
+}

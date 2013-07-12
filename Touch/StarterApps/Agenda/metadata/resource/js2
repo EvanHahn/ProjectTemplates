@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js2",
+        "url": "vendor/humanize-duration.js"
+    },
+    "designerId": "e0e6fb07-c442-4a2d-9ef0-d0dd14c5cdcc"
+}

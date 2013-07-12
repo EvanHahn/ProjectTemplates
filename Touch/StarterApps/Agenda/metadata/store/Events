@@ -1,0 +1,33 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        name: 'Daily checkin',",
+            "        rrule: 'FREQ=DAILY;DTSTART=20130201T180000Z;BYDAY=MO,TU,WE,TH,FR',",
+            "        duration: 900000",
+            "    },",
+            "    {",
+            "        name: 'Monthly mid-month meeting',",
+            "        rrule: 'FREQ=MONTHLY;WKST=MO;BYMONTHDAY=15',",
+            "        duration: 1800000",
+            "    },",
+            "    {",
+            "        name: 'Ping-pong tournament',",
+            "        rrule: 'FREQ=DAILY;DTSTART=20130801T200000Z;COUNT=1',",
+            "        duration: 3600000",
+            "    }",
+            "]"
+        ],
+        "model": "Event",
+        "storeId": "Events",
+        "designer|userClassName": "Events"
+    },
+    "designerId": "3019210a-fefd-46dc-bfe4-2a0dd008d681"
+}

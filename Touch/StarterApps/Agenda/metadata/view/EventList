@@ -1,0 +1,41 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "Agenda",
+        "designer|userClassName": "EventList",
+        "designer|userAlias": "eventlist",
+        "store": null,
+        "grouped": null,
+        "variableHeights": true
+    },
+    "designerId": "c7ad0a23-bb6b-4202-b293-ecd200bd7487",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "title",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div>{start:date}: {name} ({duration})</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "816452ba-9aab-4c7a-9f09-fb15acca51c8"
+        }
+    ]
+}

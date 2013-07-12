@@ -1,0 +1,58 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainView",
+        "designer|userAlias": "mainview",
+        "designer|initialView": true
+    },
+    "designerId": "38bbb90d-9e84-47a7-a5b5-ad491ae3caeb",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "404c3a45-15d4-4a78-8563-4a4f7ded8701",
+            "masterInstanceId": "c7ad0a23-bb6b-4202-b293-ecd200bd7487"
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|displayName": "Navigation bar"
+            },
+            "designerId": "2dcecdee-f73b-4fe6-90ba-930bf5fc0cc5",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "id": "addButton",
+                        "designer|displayName": "Add Event button",
+                        "iconAlign": null,
+                        "iconCls": "add",
+                        "text": null
+                    },
+                    "designerId": "7282cc20-c392-43bf-af99-cb84db5131b4"
+                }
+            ]
+        }
+    ]
+}

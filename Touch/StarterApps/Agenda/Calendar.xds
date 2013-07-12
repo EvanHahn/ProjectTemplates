@@ -1,0 +1,51 @@
+{
+    "name": "Calendar",
+    "settings": {
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "38bbb90d-9e84-47a7-a5b5-ad491ae3caeb",
+            "c7ad0a23-bb6b-4202-b293-ecd200bd7487"
+        ],
+        "store": [
+            "3019210a-fefd-46dc-bfe4-2a0dd008d681"
+        ],
+        "controller": [
+            "f6347e0b-74e0-4077-b5c5-8df233794ef8"
+        ],
+        "model": [
+            "6e622ab3-87d0-40ed-b31e-53db12ada2a1"
+        ],
+        "resource": [
+            "23ea1fc5-a8a2-4262-ba1b-12385a63d021",
+            "933a4364-6f6d-491a-ba4f-7003aeb9213d",
+            "e0e6fb07-c442-4a2d-9ef0-d0dd14c5cdcc",
+            "94689b26-3c05-41fe-9288-ddf9c887236e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Event"
+        ],
+        "stores": [
+            "Events"
+        ],
+        "views": [
+            "MainView",
+            "EventList"
+        ],
+        "controllers": [
+            "Navigation"
+        ],
+        "name": "Agenda"
+    },
+    "designerId": "application"
+}

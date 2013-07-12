@@ -1,0 +1,93 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Event"
+    },
+    "designerId": "6e622ab3-87d0-40ed-b31e-53db12ada2a1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "name",
+                "type": "string"
+            },
+            "designerId": "0b5ef832-78cf-46f2-aa5f-66729cec3955"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "rrule",
+                "type": "string"
+            },
+            "designerId": "1909924f-8acb-4a19-84f8-8c3aaca6c671"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "duration",
+                "type": "int"
+            },
+            "designerId": "41bf3efa-808c-40ad-8577-0a4c7c850da6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "occursBetween",
+                "designer|params": [
+                    "start",
+                    "end"
+                ],
+                "implHandler": [
+                    "var rrule = RRule.fromString(this.get('rrule')),",
+                    "    between = rrule.between(start, end);",
+                    "return between.length !== 0;"
+                ]
+            },
+            "designerId": "6f53d0a9-aa96-4b8f-9c81-2cb5ebd6a1bd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getStartTime",
+                "implHandler": [
+                    "var rrule = RRule.fromString(this.get('rrule'));",
+                    "return rrule.options.dtstart;"
+                ]
+            },
+            "designerId": "96f08e08-ca36-4d2a-ac48-8f4064c7fd7e"
+        }
+    ]
+}
